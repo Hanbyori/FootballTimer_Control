@@ -88,6 +88,8 @@ function addedTimeBtn() {
 function setTimeBtn() {
     var element1 = document.getElementById("setMinInput");
     var element2 = document.getElementById("setSecInput");
+    min = element1.value;
+    sec = element2.value;
     var url = `${proxyURL}game?min=${element1.value}&sec=${element2.value}`;
     jsonSetup(url);
     element1.value = null;
