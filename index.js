@@ -90,8 +90,8 @@ function setTimeBtn() {
     var element2 = document.getElementById("setSecInput");
     min = element1.value;
     sec = element2.value;
-    var url = `${proxyURL}game?min=${element1.value}&sec=${element2.value}`;
-    jsonSetup(url);
+    // var url = `${proxyURL}game?min=${element1.value}&sec=${element2.value}`;
+    // jsonSetup(url);
     element1.value = null;
     element2.value = null;
 }
@@ -106,7 +106,7 @@ function timerStartBtn(m, s) {
 function BeginMatch() {
     min = 0;
     sec = 0;
-    var url = `${proxyURL}game?timer=false&min=${min}&sec=${sec}&info=경기전&penalty=false&addedTime=0&home_score=0&home_ptScore=0&away_score=0&away_ptScore=0`;
+    var url = `${proxyURL}game?timer=false&info=경기전&penalty=false&addedTime=0&home_score=0&home_ptScore=0&away_score=0&away_ptScore=0`;
     jsonSetup(url);
 }
 
