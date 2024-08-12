@@ -96,13 +96,17 @@ function setTimeBtn() {
     element2.value = null;
 }
 
-function timerStartBtn(min, sec) {
+function timerStartBtn(m, s) {
+    min = m;
+    sec = s;
     var url = `${proxyURL}game?min=${min}&sec=${sec}&timer=true`;
     jsonSetup(url);
 }
 
 function BeginMatch() {
-    var url = `${proxyURL}game?timer=false&min=0&sec=0&info=경기전&penalty=false&addedTime=0&home_score=0&home_ptScore=0&away_score=0&away_ptScore=0`;
+    min = 0;
+    sec = 0;
+    var url = `${proxyURL}game?timer=false&min=${min}&sec=${sec}&info=경기전&penalty=false&addedTime=0&home_score=0&home_ptScore=0&away_score=0&away_ptScore=0`;
     jsonSetup(url);
 }
 
